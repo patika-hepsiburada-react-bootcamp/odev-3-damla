@@ -2,9 +2,6 @@
 
 Bu ödevde gerçek zamanlı çalışan bir oylama uygulaması geliştirmeniz gerekiyor.
 
-![preview](./figures/preview.png)
-
-
 ## Gereksinimler
 
 - [ ] Ekranda bir tane soru olmalı ve web sayfasına girenler oylama yapabilmeli.
