@@ -1,3 +1,5 @@
+# ⚠️ Still in Progress! ⚠️
+
 # Ödev 3
 
 Bu ödevde gerçek zamanlı çalışan bir oylama uygulaması geliştirmeniz gerekiyor.
