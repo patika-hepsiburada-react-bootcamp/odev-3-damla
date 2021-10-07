@@ -1,0 +1,27 @@
+{
+  "name": "voting-app-backend",
+  "version": "1.0.0",
+  "description": "Voting App's Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla.git"
+  },
+  "keywords": [
+    "socket-io",
+    "express-js"
+  ],
+  "author": "Damla Koksal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla/issues"
+  },
+  "homepage": "https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
