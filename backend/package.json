@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Voting App's Backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
   }
 }
