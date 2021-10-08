@@ -1,13 +1,17 @@
 // import styles from "./home.module.scss"
 import Container from "../../components/container";
 import Question from "../../components/question";
-import Graph from "../../components/graph";
+import BarChart from "../../components/bar-chart";
+import DonutChart from "../../components/donut-chart";
 
 function Home() {
   return (
     <Container>
       <Question />
-      <Graph />
+      <div>
+        <BarChart />
+        <DonutChart />
+      </div>
     </Container>
   );
 }
