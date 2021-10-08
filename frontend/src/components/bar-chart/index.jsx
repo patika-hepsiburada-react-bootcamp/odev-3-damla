@@ -1,4 +1,4 @@
-// import styles from "./graph.module.scss";
+// import styles from "./bar-chart.module.scss";
 import Chart from "react-apexcharts";
 
 const data = {
@@ -18,7 +18,7 @@ const data = {
   ],
 };
 
-function Graph() {
+function BarChart() {
   return (
     <div>
       <Chart
@@ -31,4 +31,4 @@ function Graph() {
   );
 }
 
-export default Graph;
+export default BarChart;
