@@ -1,24 +1,25 @@
 // import styles from "./bar-chart.module.scss";
 import Chart from "react-apexcharts";
 
-const data = {
-  options: {
-    chart: {
-      id: "basic-bar",
+function BarChart({ values, answers }) {
+  // local storage'dan get item yap
+  const data = {
+    options: {
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: answers,
+      },
     },
-    xaxis: {
-      categories: ["A", "B", "C", "D", "other"],
-    },
-  },
-  series: [
-    {
-      name: "Pool Results",
-      data: [30, 30, 45, 50, 49],
-    },
-  ],
-};
+    series: [
+      {
+        name: "Pool Results",
+        data: values,
+      },
+    ],
+  };
 
-function BarChart() {
   return (
     <div>
       <Chart
