@@ -7,8 +7,8 @@ import { VoteProvider } from "./contexts/VoteContext";
 
 function App() {
   return (
-    <QuestionProvider>
-      <VoteProvider>
+    <VoteProvider>
+      <QuestionProvider>
         <Router>
           <Layout>
             <Switch>
@@ -17,8 +17,8 @@ function App() {
             </Switch>
           </Layout>
         </Router>
-      </VoteProvider>
-    </QuestionProvider>
+      </QuestionProvider>
+    </VoteProvider>
   );
 }
 

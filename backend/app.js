@@ -12,17 +12,19 @@ app.get("/", (req, res) => {
   res.end("realtime voting app");
 });
 
+const votes = [0, 0, 0, 0];
+
 io.on("connection", (socket) => {
   console.log("a user connected");
 
-  // socket.emit("new-color", activeColor);
+  socket.emit("new-vote", votes);
 
-  // socket.on("new-color", (color) => {
-  //   console.log("New Color:", color);
-
-  //   io.emit("new-color", color);
-  //   activeColor = color;
-  // });
+  // to save vote values on the backend
+  socket.on("new-vote", (index) => {
+    console.log("New Vote:", index);
+    votes[index] += 1;
+    io.emit("new-vote", votes);
+  });
 
   socket.on("disconnect", () => console.log("a user disconnected"));
 });

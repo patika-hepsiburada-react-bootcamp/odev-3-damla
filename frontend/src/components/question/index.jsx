@@ -1,7 +1,31 @@
 // import styles from "./question.module.scss"
+import { useState, useEffect } from "react";
 import { useQuestion } from "../../contexts/QuestionContext";
+import { useVote } from "../../contexts/VoteContext";
 function Question() {
-  const { questions, setQuestions } = useQuestion();
+  const [selectedOption, setSelectedOption] = useState("");
+  const { questions } = useQuestion();
+  const { votes, setVotes } = useVote();
+  const [indexOfVote, setindexOfVote] = useState();
+
+  const onValueChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  useEffect(() => {
+    if (questions[0].answers.indexOf(selectedOption) >= 0) {
+      setindexOfVote(questions[0].answers.indexOf(selectedOption));
+    }
+  }, [questions, selectedOption, indexOfVote]);
+
+  const onSend = () => {
+    if (indexOfVote === undefined || null) return;
+
+    let arr = [...votes];
+    arr[indexOfVote] = arr[indexOfVote] + 1;
+
+    setVotes(arr);
+  };
 
   return (
     <>
@@ -9,12 +33,21 @@ function Question() {
       <div>
         {questions[0].answers.map((answer, i) => {
           return (
-            <div>
-              <span>{answer}</span>
-              <input key={i} type="radio" value={answer} name={answer} />
-            </div>
+            <label key={i}>
+              <input
+                type="radio"
+                value={answer}
+                name={answer}
+                checked={selectedOption === answer}
+                onChange={onValueChange}
+              />
+              {answer}
+            </label>
           );
         })}
+        <button type="submit" onClick={onSend}>
+          Send
+        </button>
       </div>
     </>
   );
