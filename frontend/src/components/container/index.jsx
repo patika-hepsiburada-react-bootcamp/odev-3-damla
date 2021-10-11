@@ -3,7 +3,6 @@
 function Container({ children }) {
   return (
     <>
-      <p>container component</p>
       <div>{children}</div>
     </>
   );

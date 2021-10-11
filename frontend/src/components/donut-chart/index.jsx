@@ -1,13 +1,15 @@
 // import styles from "donut-chart.module.scss";
 import Chart from "react-apexcharts";
 
-const data = {
-  options: { labels: ["A", "B", "C", "D", "other"] },
-  series: [30, 30, 45, 50, 49],
-  chartOptions: {},
-};
+function DonutChart({ values, answers }) {
+  let data = {
+    options: {
+      labels: answers,
+    },
+    series: values,
+    chartOptions: {},
+  };
 
-function DonutChart() {
   return (
     <div>
       <Chart

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "socket.io": "^4.2.0"
   }
