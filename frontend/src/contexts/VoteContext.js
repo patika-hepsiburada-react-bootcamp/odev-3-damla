@@ -1,6 +1,4 @@
 import { createContext, useState, useContext } from "react";
-import { useEffect } from "react";
-import { toArray } from "../services/utils";
 
 const VoteContext = createContext();
 
