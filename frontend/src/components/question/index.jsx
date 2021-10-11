@@ -2,6 +2,9 @@
 import { useState, useEffect } from "react";
 import { useQuestion } from "../../contexts/QuestionContext";
 import { useVote } from "../../contexts/VoteContext";
+
+import { sendMessage } from "../../services/socketApi";
+
 function Question() {
   const [selectedOption, setSelectedOption] = useState("");
   const { questions } = useQuestion();
@@ -12,7 +15,6 @@ function Question() {
     setSelectedOption(event.target.value);
   };
 
-  
   useEffect(() => {
     if (questions[0].answers.indexOf(selectedOption) >= 0) {
       setindexOfVote(questions[0].answers.indexOf(selectedOption));
@@ -26,7 +28,10 @@ function Question() {
     // shallow copying votes to edit object without affecting its own reference
     let arr = [...votes];
     arr[indexOfVote] = arr[indexOfVote] + 1;
-
+    sendMessage("new-vote", {
+      index: indexOfVote,
+      answer: questions[0].answers[indexOfVote],
+    });
     setVotes(arr);
   };
 
