@@ -9,6 +9,8 @@ const io = new Server(server, {
   /* options */
 });
 
+const PORT = process.env.PORT || 5000;
+
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -32,6 +34,6 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => console.log("a user disconnected"));
 });
 
-server.listen(3001, () => {
-  console.log("listening on *:3001");
+server.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
 });
