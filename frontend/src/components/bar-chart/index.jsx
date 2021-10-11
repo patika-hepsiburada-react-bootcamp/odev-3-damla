@@ -2,8 +2,8 @@
 import Chart from "react-apexcharts";
 
 function BarChart({ values, answers }) {
-  // local storage'dan get item yap
-  const data = {
+
+  let data = {
     options: {
       chart: {
         id: "basic-bar",

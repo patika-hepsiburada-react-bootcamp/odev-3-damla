@@ -2,8 +2,7 @@
 import Chart from "react-apexcharts";
 
 function DonutChart({ values, answers }) {
-  // local storage'dan get item yap
-  const data = {
+  let data = {
     options: {
       labels: answers,
     },
