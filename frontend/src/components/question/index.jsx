@@ -2,9 +2,12 @@
 import { useState, useEffect } from "react";
 import { useQuestion } from "../../contexts/QuestionContext";
 import { useVote } from "../../contexts/VoteContext";
+<<<<<<< HEAD
 
 import { sendMessage } from "../../services/socketApi";
 
+=======
+>>>>>>> 49aca5b224aee5f20b1c38eca5fd6a21f91ebffc
 function Question() {
   const [selectedOption, setSelectedOption] = useState("");
   const { questions } = useQuestion();
@@ -21,17 +24,12 @@ function Question() {
     }
   }, [questions, selectedOption, indexOfVote]);
 
-  // invokes on button click event
   const onSend = () => {
     if (indexOfVote === undefined || null) return;
 
-    // shallow copying votes to edit object without affecting its own reference
     let arr = [...votes];
     arr[indexOfVote] = arr[indexOfVote] + 1;
-    sendMessage("new-vote", {
-      index: indexOfVote,
-      answer: questions[0].answers[indexOfVote],
-    });
+
     setVotes(arr);
   };
 

@@ -4,7 +4,6 @@ let socket;
 
 export const connectSocket = () => {
   console.log("Connecting");
-
   socket = io(process.env.REACT_APP_BACKEND_ENDPOINT, {
     transports: ["websocket"],
   });

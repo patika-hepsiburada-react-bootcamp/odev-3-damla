@@ -20,8 +20,8 @@ io.on("connection", (socket) => {
   socket.emit("new-vote", votes);
 
   // to save vote values on the backend
-  socket.on("new-vote", ({ index, answer }) => {
-    console.log("New Vote:", answer);
+  socket.on("new-vote", (index, ) => {
+    console.log("New Vote:", index);
     votes[index] += 1;
     io.emit("new-vote", votes);
   });
