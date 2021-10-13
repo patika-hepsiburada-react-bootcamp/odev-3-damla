@@ -1,16 +1,6 @@
-# ⚠️ Still in Progress! ⚠️
+# Description
 
-# Ödev 3
+- This project is done for educational purposes. A voting application based on one question done by using React JS and Socket IO.
 
-Bu ödevde gerçek zamanlı çalışan bir oylama uygulaması geliştirmeniz gerekiyor.
-
-## Gereksinimler
-
-- [ ] Ekranda bir tane soru olmalı ve web sayfasına girenler oylama yapabilmeli.
-- [ ] Verilen oylar gerçek zamanlı olarak bağlı olan diğer kullanıcılara da gösterilmelidir.
-- [ ] Sayfa yenilendikten sonra herhangi veri kaybı olmamalıdır.
-- [ ] Oylama sonuç durumu grafiksel ve yüzdesel olarak gösterilmelidir.
-- [ ] Uygulama Netlify üzerine deploy edilmeli ve uygulamanın demo URL'i README dosyasının en üstünde belirtilmelidir.
-
-
-[Demo Uygulama](https://www.youtube.com/watch?v=M0s6DLpcSn0)
+[PM Board](https://github.com/patika-hepsiburada-react-bootcamp/odev-3-damla/projects/1)
+[Preview](hb-voting-project.netlify.app)
